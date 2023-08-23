@@ -1,0 +1,126 @@
+.post {
+  background: var(--gray-800);
+  border-radius: 8px;
+
+  padding: 2.5rem;
+}
+
+.post + .post {
+  margin-top: 2rem;
+}
+
+/*---------------------HEADER------------------------------*/
+.post > header {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+} 
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.userInfo > div strong {
+  display: block;
+  line-height: 1.6;
+}
+
+.userInfo > div span {
+  display: block;
+
+  color: var(--gray-400);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.post > header time {
+  color: var(--gray-400);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/*---------------------POST CONTENT (MAIN)--------------------------*/
+.postContent {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--gray-700);
+  line-height: 1.6;
+}
+
+.postContent p {
+  color: var(--gray-300);
+  margin-top: 1.5rem;
+}
+
+.postContent a {
+  color: var(--green-800);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.postContent a:hover {
+  color: var(--green-500);
+  text-decoration: underline;
+}
+
+/*---------------------FORM------------------------------*/
+.commentForm {
+  padding-top: 1.5rem;
+}
+
+.commentForm span {
+  display: block;
+  color: var(--gray-100);
+  font-weight: 700;
+}
+
+.commentForm textarea {
+  display: block;
+  width: 100%;
+  height: 6.25rem;
+
+  background: var(--gray-900);
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border: 0;
+  border-radius: 8px;
+  resize: none;
+
+  color: var(--gray-300);
+}
+
+.commentForm footer {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.commentForm:focus-within footer {
+  visibility: visible;
+  max-height: none;
+}
+
+.commentForm button {
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+
+  color: var(--white);
+  background: var(--green-800);
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.commentForm button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.commentForm button:not(:disabled):hover {
+  background-color: var(--green-500);
+}
